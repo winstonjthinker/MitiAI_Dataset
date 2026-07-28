@@ -1,0 +1,186 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1700 1200" width="1700" height="1200" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+<rect width="1700" height="1200" fill="#ffffff"/>
+<text x="44" y="58" font-size="30" font-weight="700" fill="#1c1c1a">ZW-BioBank v1.0 &#8212; entity relationship</text>
+<text x="44" y="90" font-size="17" fill="#6b6b63">Four data streams joined on one physical sample. Five linked tables, 156 documented fields.</text>
+<text x="44" y="116" font-size="17" fill="#6b6b63">Miti AI Consortium &#183; POTRAZ AI for Impact Challenge 2026 &#183; Track 1: Data &#183; Lead Innovator: Mutsa M Mutepfa</text>
+<path d="M 1232 702 C 1140 702, 1140 808, 1060 808" fill="none" stroke="#b8860b" stroke-width="5" opacity="0.85"/>
+<path d="M 624 808 C 534 808, 542 212, 452 212" fill="none" stroke="#b8860b" stroke-width="5" opacity="0.85"/>
+<path d="M 1060 328 L 1146.0 328 L 1146.0 222 L 1232 222" fill="none" stroke="#26557f" stroke-width="2.5" opacity="0.55"/>
+<circle cx="1232" cy="222" r="5" fill="#26557f" opacity="0.75"/>
+<path d="M 248.0 852 L 248.0 829 L 248.0 829 L 248.0 803" fill="none" stroke="#4a4a44" stroke-width="1.6" stroke-dasharray="5 5" opacity="0.4"/>
+<path d="M 248.0 852 L 248.0 962 L 842.0 962 L 842.0 936" fill="none" stroke="#4a4a44" stroke-width="1.6" stroke-dasharray="5 5" opacity="0.4"/>
+<rect x="44" y="150" width="408" height="653" rx="8" fill="#ffffff" stroke="#8c3f2b" stroke-width="2.5"/>
+<path d="M 44 200 L 44 158 Q 44 150 52 150 L 444 150 Q 452 150 452 158 L 452 200 Z" fill="#8c3f2b"/>
+<text x="58" y="175" font-size="19" font-weight="700" fill="#ffffff">T4 · heritage_knowledge</text>
+<text x="58" y="192" font-size="12" fill="#ffffff" opacity="0.85">Stream C · the targeting layer · ZW-TK-YYYY-NNN</text>
+<text x="58" y="229" font-size="11" font-weight="700" fill="#8c3f2b">PK</text>
+<text x="88" y="229" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="700" fill="#1c1c1a">tk_id</text>
+<text x="58" y="252" font-size="11" font-weight="700" fill="#8c3f2b">FK</text>
+<text x="88" y="252" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="700" fill="#1c1c1a">source_id</text>
+<text x="438" y="252" font-size="11" text-anchor="end" fill="#6b6b63" font-style="italic">ZW-SRC-004</text>
+<text x="88" y="275" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">holder_pseudonym_id</text>
+<text x="438" y="275" font-size="11" text-anchor="end" fill="#6b6b63" font-style="italic">not resolvable here</text>
+<text x="88" y="298" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">community_council_id</text>
+<text x="88" y="321" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">council_endorsement_ref</text>
+<text x="88" y="344" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">consent_reference</text>
+<text x="438" y="344" font-size="11" text-anchor="end" fill="#6b6b63" font-style="italic">required</text>
+<text x="88" y="367" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">consent_date</text>
+<text x="438" y="367" font-size="11" text-anchor="end" fill="#6b6b63" font-style="italic">&lt;= interview_date</text>
+<text x="88" y="390" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">collection_language</text>
+<text x="88" y="413" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">knowledge_type</text>
+<text x="88" y="436" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">local_plant_name</text>
+<text x="88" y="459" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">language_tag</text>
+<text x="88" y="482" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">scientific_name</text>
+<text x="88" y="505" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">disease_target_local</text>
+<text x="438" y="505" font-size="11" text-anchor="end" fill="#6b6b63" font-style="italic">verbatim</text>
+<text x="88" y="528" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">disease_target_en</text>
+<text x="438" y="528" font-size="11" text-anchor="end" fill="#6b6b63" font-style="italic">derived</text>
+<text x="88" y="551" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">translation_status</text>
+<text x="88" y="574" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">disease_target_icd11</text>
+<text x="88" y="597" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">preparation_method</text>
+<text x="438" y="597" font-size="11" text-anchor="end" fill="#6b6b63" font-style="italic">verbatim</text>
+<text x="88" y="620" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">preparation_class</text>
+<text x="88" y="643" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">plant_part_used</text>
+<text x="88" y="666" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">district / ward</text>
+<text x="438" y="666" font-size="11" text-anchor="end" fill="#6b6b63" font-style="italic">attribution unit</text>
+<text x="88" y="689" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">named_attribution_opt_in</text>
+<text x="438" y="689" font-size="11" text-anchor="end" fill="#6b6b63" font-style="italic">opt-in</text>
+<text x="88" y="712" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">sensitivity_level</text>
+<text x="438" y="712" font-size="11" text-anchor="end" fill="#6b6b63" font-style="italic">no 'sacred'</text>
+<text x="88" y="735" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">benefit_sharing_agreement_ref</text>
+<text x="438" y="735" font-size="11" text-anchor="end" fill="#6b6b63" font-style="italic">required</text>
+<text x="88" y="758" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">withdrawal_status</text>
+<text x="88" y="781" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">record_status</text>
+<rect x="624" y="168" width="436" height="768" rx="8" fill="#ffffff" stroke="#1f5c46" stroke-width="2.5"/>
+<path d="M 624 218 L 624 176 Q 624 168 632 168 L 1052 168 Q 1060 168 1060 176 L 1060 218 Z" fill="#1f5c46"/>
+<text x="638" y="193" font-size="19" font-weight="700" fill="#ffffff">T1 · environmental_samples</text>
+<text x="638" y="210" font-size="12" fill="#ffffff" opacity="0.85">Stream D + collection event · the spine · ZW-SMP-YYYY-NNN</text>
+<text x="638" y="247" font-size="11" font-weight="700" fill="#1f5c46">PK</text>
+<text x="668" y="247" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="700" fill="#1c1c1a">sample_id</text>
+<text x="668" y="270" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">collection_event_id</text>
+<text x="638" y="293" font-size="11" font-weight="700" fill="#1f5c46">FK</text>
+<text x="668" y="293" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="700" fill="#1c1c1a">source_id</text>
+<text x="1046" y="293" font-size="11" text-anchor="end" fill="#6b6b63" font-style="italic">source register</text>
+<text x="668" y="316" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">ecozone</text>
+<text x="668" y="339" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">province / district / ward</text>
+<text x="668" y="362" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">land_tenure</text>
+<text x="668" y="385" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">gps_latitude / gps_longitude</text>
+<text x="1046" y="385" font-size="11" text-anchor="end" fill="#6b6b63" font-style="italic">WGS 84</text>
+<text x="668" y="408" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">gps_precision_m</text>
+<text x="668" y="431" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">location_masked</text>
+<text x="1046" y="431" font-size="11" text-anchor="end" fill="#6b6b63" font-style="italic">blur flag</text>
+<text x="668" y="454" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">altitude_m</text>
+<text x="668" y="477" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">sample_type</text>
+<text x="668" y="500" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">collection_depth_cm</text>
+<text x="1046" y="500" font-size="11" text-anchor="end" fill="#6b6b63" font-style="italic">if soil</text>
+<text x="668" y="523" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">local_name</text>
+<text x="668" y="546" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">scientific_name</text>
+<text x="668" y="569" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">taxon_confidence</text>
+<text x="668" y="592" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">voucher_specimen_ref</text>
+<text x="1046" y="592" font-size="11" text-anchor="end" fill="#6b6b63" font-style="italic">Herbarium</text>
+<text x="668" y="615" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">collection_date</text>
+<text x="668" y="638" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">season</text>
+<text x="668" y="661" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">soil_ph / temperature_celsius</text>
+<text x="668" y="684" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">rainfall_prior_30d_mm</text>
+<text x="668" y="707" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">preservation_method</text>
+<text x="668" y="730" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">minutes_to_preservation</text>
+<text x="1046" y="730" font-size="11" text-anchor="end" fill="#6b6b63" font-style="italic">mobile lab KPI</text>
+<text x="668" y="753" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">processing_lab</text>
+<text x="668" y="776" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">chain_of_custody_ref</text>
+<text x="638" y="799" font-size="11" font-weight="700" fill="#1f5c46">FK</text>
+<text x="668" y="799" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="700" fill="#1c1c1a">heritage_use_ref</text>
+<text x="1046" y="799" font-size="11" text-anchor="end" fill="#6b6b63" font-style="italic">nullable</text>
+<text x="668" y="822" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">consent_reference</text>
+<text x="1046" y="822" font-size="11" text-anchor="end" fill="#6b6b63" font-style="italic">consent gate</text>
+<text x="668" y="845" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">nba_permit_ref</text>
+<text x="1046" y="845" font-size="11" text-anchor="end" fill="#6b6b63" font-style="italic">permit gate</text>
+<text x="668" y="868" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">access_permit_ref</text>
+<text x="668" y="891" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">sequencing_status / lc_ms_status</text>
+<text x="668" y="914" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">record_status</text>
+<rect x="1232" y="120" width="424" height="515" rx="8" fill="#ffffff" stroke="#26557f" stroke-width="2.5"/>
+<path d="M 1232 170 L 1232 128 Q 1232 120 1240 120 L 1648 120 Q 1656 120 1656 128 L 1656 170 Z" fill="#26557f"/>
+<text x="1246" y="145" font-size="19" font-weight="700" fill="#ffffff">T2 · genomic_sequences</text>
+<text x="1246" y="162" font-size="12" fill="#ffffff" opacity="0.85">Stream A · ZW-SEQ-YYYY-NNN</text>
+<text x="1246" y="199" font-size="11" font-weight="700" fill="#26557f">PK</text>
+<text x="1276" y="199" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="700" fill="#1c1c1a">sequence_id</text>
+<text x="1246" y="222" font-size="11" font-weight="700" fill="#26557f">FK</text>
+<text x="1276" y="222" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="700" fill="#1c1c1a">sample_id</text>
+<text x="1276" y="245" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">platform</text>
+<text x="1276" y="268" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">basecalling_model</text>
+<text x="1642" y="268" font-size="11" text-anchor="end" fill="#6b6b63" font-style="italic">reproducibility</text>
+<text x="1276" y="291" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">target_region</text>
+<text x="1276" y="314" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">read_count / total_bases</text>
+<text x="1276" y="337" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">read_n50_bp / mean_q_score</text>
+<text x="1276" y="360" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">assembly_method</text>
+<text x="1276" y="383" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">taxonomic_assignment</text>
+<text x="1276" y="406" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">assignment_method</text>
+<text x="1642" y="406" font-size="11" text-anchor="end" fill="#6b6b63" font-style="italic">+ DB version</text>
+<text x="1276" y="429" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">organism_novelty</text>
+<text x="1642" y="429" font-size="11" text-anchor="end" fill="#6b6b63" font-style="italic">LBL-01</text>
+<text x="1276" y="452" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">best_blast_pct_identity</text>
+<text x="1276" y="475" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">predicted_function</text>
+<text x="1642" y="475" font-size="11" text-anchor="end" fill="#6b6b63" font-style="italic">LBL-02</text>
+<text x="1276" y="498" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">disease_target_relevance</text>
+<text x="1642" y="498" font-size="11" text-anchor="end" fill="#6b6b63" font-style="italic">LBL-03</text>
+<text x="1276" y="521" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">annotation_confidence</text>
+<text x="1642" y="521" font-size="11" text-anchor="end" fill="#6b6b63" font-style="italic">LBL-04</text>
+<text x="1276" y="544" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">bgc_count</text>
+<text x="1642" y="544" font-size="11" text-anchor="end" fill="#6b6b63" font-style="italic">antiSMASH</text>
+<text x="1276" y="567" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">heritage_link</text>
+<text x="1642" y="567" font-size="11" text-anchor="end" fill="#6b6b63" font-style="italic">LBL-08</text>
+<text x="1276" y="590" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">file_checksum_sha256</text>
+<text x="1642" y="590" font-size="11" text-anchor="end" fill="#6b6b63" font-style="italic">SHA-256</text>
+<text x="1276" y="613" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">qc_status</text>
+<rect x="1232" y="640" width="424" height="446" rx="8" fill="#ffffff" stroke="#5c3f7a" stroke-width="2.5"/>
+<path d="M 1232 690 L 1232 648 Q 1232 640 1240 640 L 1648 640 Q 1656 640 1656 648 L 1656 690 Z" fill="#5c3f7a"/>
+<text x="1246" y="665" font-size="19" font-weight="700" fill="#ffffff">T3 · metabolomic_profiles</text>
+<text x="1246" y="682" font-size="12" fill="#ffffff" opacity="0.85">Stream B · ZW-MET-YYYY-NNN</text>
+<text x="1246" y="719" font-size="11" font-weight="700" fill="#5c3f7a">PK</text>
+<text x="1276" y="719" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="700" fill="#1c1c1a">metabolite_id</text>
+<text x="1246" y="742" font-size="11" font-weight="700" fill="#5c3f7a">FK</text>
+<text x="1276" y="742" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="700" fill="#1c1c1a">sample_id</text>
+<text x="1276" y="765" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">extract_id / extraction_solvent</text>
+<text x="1276" y="788" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">instrument / ionization_mode</text>
+<text x="1276" y="811" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">retention_time_min</text>
+<text x="1276" y="834" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">mz_measured / mz_error_ppm</text>
+<text x="1276" y="857" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">relative_abundance</text>
+<text x="1276" y="880" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">putative_compound_name</text>
+<text x="1276" y="903" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">molecular_formula</text>
+<text x="1276" y="926" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">smiles_canonical</text>
+<text x="1642" y="926" font-size="11" text-anchor="end" fill="#6b6b63" font-style="italic">canonicalised</text>
+<text x="1276" y="949" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">inchikey</text>
+<text x="1642" y="949" font-size="11" text-anchor="end" fill="#6b6b63" font-style="italic">scaffold split key</text>
+<text x="1276" y="972" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">msi_annotation_level</text>
+<text x="1642" y="972" font-size="11" text-anchor="end" fill="#6b6b63" font-style="italic">LBL-06 · 1-4</text>
+<text x="1276" y="995" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">compound_class</text>
+<text x="1642" y="995" font-size="11" text-anchor="end" fill="#6b6b63" font-style="italic">LBL-05</text>
+<text x="1276" y="1018" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">compound_novelty</text>
+<text x="1642" y="1018" font-size="11" text-anchor="end" fill="#6b6b63" font-style="italic">LBL-07</text>
+<text x="1276" y="1041" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">file_checksum_sha256</text>
+<text x="1642" y="1041" font-size="11" text-anchor="end" fill="#6b6b63" font-style="italic">SHA-256</text>
+<text x="1276" y="1064" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">qc_status</text>
+<rect x="44" y="852" width="408" height="285" rx="8" fill="#ffffff" stroke="#4a4a44" stroke-width="2.5"/>
+<path d="M 44 902 L 44 860 Q 44 852 52 852 L 444 852 Q 452 852 452 860 L 452 902 Z" fill="#4a4a44"/>
+<text x="58" y="877" font-size="19" font-weight="700" fill="#ffffff">T5 · qc_log</text>
+<text x="58" y="894" font-size="12" fill="#ffffff" opacity="0.85">validation audit trail · retained permanently · ZW-QC-YYYY-NNN</text>
+<text x="58" y="931" font-size="11" font-weight="700" fill="#4a4a44">PK</text>
+<text x="88" y="931" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="700" fill="#1c1c1a">qc_id</text>
+<text x="88" y="954" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">target_table / target_record_id</text>
+<text x="88" y="977" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">check_name</text>
+<text x="88" y="1000" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">quality_dimension</text>
+<text x="438" y="1000" font-size="11" text-anchor="end" fill="#6b6b63" font-style="italic">1 of 7</text>
+<text x="88" y="1023" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">check_result</text>
+<text x="438" y="1023" font-size="11" text-anchor="end" fill="#6b6b63" font-style="italic">pass | warning | fail</text>
+<text x="88" y="1046" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">severity</text>
+<text x="88" y="1069" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">issue_owner</text>
+<text x="88" y="1092" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">correction_action</text>
+<text x="88" y="1115" font-size="14" font-family="Menlo, Consolas, monospace" font-weight="400" fill="#1c1c1a">resolution_status</text>
+<rect x="480" y="1045" width="700" height="80" rx="8" fill="#fdf6e3" stroke="#b8860b" stroke-width="2"/>
+<text x="502" y="1072" font-size="16" font-weight="700" fill="#b8860b">THE PROVENANCE CHAIN</text>
+<text x="502" y="1094" font-size="14.5" fill="#1c1c1a">compound &#8594; sample &#8594; tk_id &#8594; holder &#8594; signed benefit-sharing agreement</text>
+<text x="502" y="1115" font-size="13" fill="#6b6b63">Queryable as v_provenance_chain. Not a memorandum &#8212; a foreign key.</text>
+<text x="1232" y="1105" font-size="12" fill="#6b6b63">PK primary key &#183; FK foreign key &#183; dashed: every record is logged to T5</text>
+<text x="1232" y="1124" font-size="12" fill="#6b6b63">Consent gate: heritage_use_ref IS NULL OR consent_reference IS NOT NULL</text>
+<text x="1232" y="1143" font-size="12" fill="#6b6b63">Prior consent: consent_date &lt;= interview_date</text>
+<text x="1232" y="1162" font-size="12" fill="#6b6b63">sensitivity_level admits 'public' and 'community-restricted' only</text>
+</svg>

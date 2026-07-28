@@ -1,0 +1,33 @@
+{
+  "title": "ZW-BioBank v1.0 — Subset: Traditional Heritage Knowledge (T4, Stream C)",
+  "description": "Structured records of traditional knowledge, documented from consenting holders in Shona and Ndebele: plant-disease associations, preparation methods and ecological knowledge, with the vernacular text retained verbatim and the English rendering flagged as derived. This is the targeting layer that makes the other three streams targeted rather than random. KNOWN GAPS: represents only consenting holders in participating communities and is not representative of Zimbabwe; knowledge classified sacred is never requested and is absent by design, not by omission; older holders are less available during farming season.",
+  "source": "Miti AI Consortium. Field collection across three Zimbabwean ecozones (ZW-SRC-001/002/003); consented traditional heritage knowledge holders (ZW-SRC-004); National Herbarium of Zimbabwe (ZW-SRC-005); SIRDC LC-MS instrumentation (ZW-SRC-006). Full provenance with permission status and known limitations in governance/source_register.csv.",
+  "timestamp": {
+    "collection_start": "2026-09-01T00:00:00+02:00",
+    "collection_end": "2027-01-31T23:59:59+02:00"
+  },
+  "license": "Public-sensitivity records: attribution required, crediting the originating community. Community-restricted records: SIRDC plus community council dual approval. No commercial use without an executed benefit-sharing agreement.",
+  "language_tags": [
+    "sn",
+    "nd",
+    "en"
+  ],
+  "geographic_coverage": "Zimbabwe — Eastern Highlands (Chimanimani, Mutare, Nyanga), Mazowe (Chiredzi, Chipinge border), Zvishavane (Hwange, Gokwe, Midlands). Public release carries ward-centroid coordinates at 5000 m stated precision.",
+  "temporal_coverage": "Dry season September–November 2026; wet season refresh January–March 2027. Every record carries a season tag, because plant and microbial chemistry differ between them.",
+  "data_type": "text (UTF-8), tabular, audio (restricted tier)",
+  "data_sensitivity": "confidential — community-restricted; pseudonymised at holder level",
+  "consent_status": "obtained — FPIC per holder in the holder's own language plus community council endorsement, both dated before the interview and enforced by constraint. Withdrawal is unconditional and permanent.",
+  "quality_summary": "Validator run over 28 illustrative records produced 139 checks: 131 pass, 8 warning, 0 fail. All seven Minimum Expectations quality dimensions are exercised (accuracy, completeness, consistency, integrity, timeliness, uniqueness, validity). Critical-field completeness threshold is 95%. Warnings are documented caveats, not defects: unverified translation, sub-Q10 sequence quality, MSI level 3-4 putative annotations, and single-season ecozone coverage pending the seasonal refresh. Full detail in processed/qc_log_v1.csv and validation/error_log.csv.",
+  "bias_and_coverage_notes": "Language representation (BR-03): a 30% Ndebele floor is checked by the validator on every batch. Holder availability (BR-05): interviews are scheduled outside peak farming season and interviewer identity is recorded so interviewer effects are detectable.",
+  "version": "v1.0.0",
+  "contact_or_steward": "SIRDC — Scientific and Industrial Research and Development Centre (primary steward, institutional custody). Miti AI Consortium (technical maintainer). Lead Innovator: Mutsa M Mutepfa.",
+  "extensions": {
+    "records_illustrative": 6,
+    "target_records": "300-500",
+    "primary_key": "tk_id",
+    "id_format": "ZW-TK-YYYY-NNN",
+    "holder_identity": "NOT in this subset at any tier. holder_pseudonym_id resolves only through the AES-256 encrypted Holder Identity Register in SIRDC custody.",
+    "sacred_knowledge": "Not collected. 'sacred' is not an accepted value of sensitivity_level; the database rejects any attempt to store it.",
+    "file": "processed/heritage_knowledge_v1.csv"
+  }
+}

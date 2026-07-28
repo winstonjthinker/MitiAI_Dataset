@@ -1,0 +1,70 @@
+relative_path,sha256,size_bytes,version,role,sensitivity_level,description
+PROJECT_ARCHITECTURE.md,6122a35dd1cab5b4cc32fe2a08a4b61b1a666e0a962b81e61172048b3b9dc08b,20688,v1.0.0,unclassified,public,
+README.md,1af791e63059f9b42f8b25a85584fd58b6a36f66349f0bb6bd687aa1ec566579,17547,v1.0.0,documentation,public,"Package overview, how to run everything, and what is specification versus illustrative"
+governance/access_policy.pdf,f88be85b12f94bfab75703424f8b4fe2c186ba3b52f56b5e08bea123951c082e,6050,v1.0.0,governance,public,"Tiers, roles, security, retention, prohibited uses"
+governance/anonymization_plan.pdf,0846ede8fe9c4aac96a71fb92193ac6228d792a7da65c09ae5c0dc5ba1f1084b,5402,v1.0.0,governance,public,"Structural controls, location masking, re-identification risk"
+governance/bias_risk_register.csv,d3e55d83bab6bd2e25f47c702a6369fb86c5837db764b776825b226fdc5d9226,4027,v1.0.0,governance,public,Eight bias risks with runnable monitoring queries
+governance/budget_refresh_and_handover.csv,691a5ad8389aaf623e86a11d2d2afbe9398a57c0e6d33c0b138e791a9dd96436,2165,v1.0.0,governance,public,Budget refresh and handover timeline
+governance/consent_log.csv,09b291f46025b8fa35bde6cfb76f273b469279000610c0da3e9dbdc95a236fe6,8175,v1.0.0,governance,confidential,FPIC record per heritage knowledge holder
+governance/consent_template.pdf,942c513d855ca746947293b4559dcdadaa03ae12ba7488d76e026a70e28411ca,5577,v1.0.0,governance,public,"FPIC template, English reference version"
+governance/dpa_compliance_matrix.csv,8dcd0940133a026e8e0d502bf03da127e1290837dc74f2dd2eac14fa34517b56,3661,v1.0.0,governance,public,Data Protection Act [Chapter 12:07] compliance matrix
+governance/license.txt,70b79cb83cb3e102483c52447e39a9e827f2db8011be70480102549711f06eea,4646,v1.0.0,governance,public,MIT for code; sovereign controlled access for data
+governance/next_90_days.md,b7b2e44805755d422b42a0ed06013853e5c26a01c491e4d13a2c8f7db8a6c6d6,4278,v1.0.0,governance,public,Next 90 days implementation plan
+governance/progress_log.csv,4544d8e8cfeac6e0bee1313e09540b2be1974cffe92d121a50dc09b9766e6bfd,2238,v1.0.0,governance,public,Implementation progress log
+governance/self_assessment_checklist.csv,c5f019de70e0e2fcd4ecf3847cb6de9f193241f68bea1ae0a0430942afa4a8ac,2457,v1.0.0,governance,public,"Minimum Expectations §7 checklist, completed with evidence locations"
+governance/source_register.csv,2beb0918e687f5f53f5ba7788ff96d692d8f2c5374ac26aa9732445cddddb1c6,6408,v1.0.0,governance,public,Six sources with all seven required provenance fields
+governance/target_population_and_sampling.md,9307d0d925f9d4e66073e61fc564350264e4d072531bc98be84e7aed0019af1c,4194,v1.0.0,governance,public,Target population and sampling strategy
+labels/annotation_guide.pdf,7381a156bcf68c519b0da490bcd963ef5c3dbd70ee60d1e1602c4810c94f3cb0,8109,v1.0.0,labels,public,"Annotator workflow, review and adjudication"
+labels/annotations_v1.jsonl,11772b102fcfd9b5c60aa304d9fcdccdade5c600763795dc0d756d4d5d783e2c,121132,v1.0.0,labels,public,"Applied labels with annotator, guide version and review status"
+labels/label_taxonomy.csv,c4ebabb03e464549c726d76eb109849f361cccb38e134d4550c1996b4d5a852f,5238,v1.0.0,labels,public,Ten labels with definitions and positive/negative examples
+metadata/dataset_metadata.json,28d90be4673812e611a71f01672ab4a9d7adf6f87291e44ebbb49bdcb9f37d1d,10041,v1.0.0,metadata,public,Dataset metadata card — Annex B keys verbatim
+metadata/subset_metadata_environmental.json,760a906a1c5a9adcab30a5f9397e16d04cfb2f00a72ddd6392e019dbb2fbfe32,2939,v1.0.0,metadata,public,Subset card — T1 environmental samples
+metadata/subset_metadata_genomic.json,f5e9e7f1b38c7abc50ea81831d5ddcb58d5a9dc0616619721a0343a8dd067f9f,3233,v1.0.0,metadata,public,Subset card — T2 genomic sequences
+metadata/subset_metadata_metabolomic.json,38a2d187697659c69ae0320bb5c3bb54de14e2df0fefda759f577f76575864c7,3407,v1.0.0,metadata,public,Subset card — T3 metabolomic profiles
+metadata/subset_metadata_tk.json,78c28bda16566952b1d4d8a342f842013b9aa7a872d5691c910dd69a43501853,3930,v1.0.0,metadata,public,Subset card — T4 heritage knowledge
+processed/environmental_samples_v1.csv,4dabd881ed7867ece3c7f1ad6e4eeb382654cf37bc4e2949299fb62dc8dc2507,44650,v1.0.0,data,public,T1 · Stream D (ILLUSTRATIVE)
+processed/environmental_samples_v1.xlsx,57d5d7ad38c3e42bfb7a26544b1829b1fd4ac18e9482218a338b05458b74c4c2,29701,v1.0.0,data,public,T1 · Stream D Excel spreadsheet (ILLUSTRATIVE)
+processed/genomic_sequences_v1.csv,df1629f54ef6789b4182255c3c435951e193db9ff178d2f547fe3aa988bfba32,26272,v1.0.0,data,public,T2 · Stream A (ILLUSTRATIVE)
+processed/genomic_sequences_v1.xlsx,253583dff80c39924bd857967e401e32717748bf5b0f08f1b647ed80f45fb919,16276,v1.0.0,data,public,T2 · Stream A Excel spreadsheet (ILLUSTRATIVE)
+processed/heritage_knowledge_v1.csv,9c19efd23c5b37064d5567c019a9a9520cd9ffca2b2ec31fefc32bf140c9aa2b,24670,v1.0.0,data,confidential,T4 · Stream C (ILLUSTRATIVE)
+processed/heritage_knowledge_v1.xlsx,15404b3a20ae82849f49a5adcb292deab1d863026f7472e90def41672d35d945,18343,v1.0.0,data,confidential,T4 · Stream C Excel spreadsheet (ILLUSTRATIVE)
+processed/metabolomic_profiles_v1.csv,76ea5c94700d191f28663bb762c8b8412cd068501bfbc6d9a8e21fbe13314bef,35471,v1.0.0,data,internal,T3 · Stream B (ILLUSTRATIVE)
+processed/metabolomic_profiles_v1.xlsx,961d676cd81bf3afd02ebfbbcf4255f9db2fcc3bc7cdf39fb72a82f263d0573a,23662,v1.0.0,data,internal,T3 · Stream B Excel spreadsheet (ILLUSTRATIVE)
+processed/qc_log_v1.csv,9dbe33f1beadf4c8d6a3f0bdb2e4aace00efa069fd0b6ce06f99c7f41515e802,191986,v1.0.0,quality,public,"T5 · every validation event, written by validate.py"
+processed/qc_log_v1.xlsx,33933cbf8aa438cc4369e0401564c1cf402d6377a260dd8387a26483d2dc897d,62912,v1.0.0,quality,public,T5 · every validation event Excel spreadsheet
+processed/zw_biobank_v1.0_all_tables.xlsx,f6e138d3cb1ce3ed05532f50fa8d5ebc95fdd0f69f423c950ff48605b8bb5aeb,133489,v1.0.0,data,public,All-in-one Excel workbook containing all data streams as sheets
+raw/zw_src_001_eastern_highlands/README.md,7ed00942ba0ed868d26f49078eb8cc04a936f35546c9a8d98c74385ff105768d,1772,v1.0.0,documentation,public,Raw directory convention and access terms — ZW-SRC-001 Eastern Highlands
+raw/zw_src_001_eastern_highlands/raw_field_collection_eastern_highlands.csv,eb5adf44f7c69d0248943e663c112403ce270c651c16363532ea42555e894cb4,17138,v1.0.0,data,public,Raw field collection log — Eastern Highlands
+raw/zw_src_001_eastern_highlands/raw_field_collection_eastern_highlands.xlsx,8b07fd3784edda38f2d76d238234d5fcbeef548d12d047c467cefd215e155c7e,14280,v1.0.0,data,public,Raw field collection log Excel — Eastern Highlands
+raw/zw_src_002_mazowe/README.md,af3406933cbb786eb5b5b17b7bba313e04bcaa397031e764fdc84c97de5f65a1,1437,v1.0.0,documentation,public,Raw directory convention and access terms — ZW-SRC-002 Mazowe
+raw/zw_src_002_mazowe/raw_field_collection_mazowe.csv,59cd226af20705c69a9bff177f1a06734fb480fef043d286c9be98822f5969b0,13051,v1.0.0,data,public,Raw field collection log — Mazowe
+raw/zw_src_002_mazowe/raw_field_collection_mazowe.xlsx,e433cc31f4da94008b5b837008220cf5a3fd70a7cdbeb4b09a4effa43c769067,12407,v1.0.0,data,public,Raw field collection log Excel — Mazowe
+raw/zw_src_003_zvishavane/README.md,5f2ca9b242bdf76712ac79a9609360fb050db2440fedcbbd34b3b61e289f6f6f,1240,v1.0.0,documentation,public,Raw directory convention and access terms — ZW-SRC-003 Zvishavane
+raw/zw_src_003_zvishavane/raw_field_collection_zvishavane.csv,6527fb8dbb40f6d0bbf2b0522ac910b1d2d3f762d7ed31007f0dc5ed70183ee7,9439,v1.0.0,data,public,Raw field collection log — Zvishavane
+raw/zw_src_003_zvishavane/raw_field_collection_zvishavane.xlsx,76a11b00855b36e0ee559909b7e9cd4c67af5f8910d5f114c407c7bafc3e4d88,10398,v1.0.0,data,public,Raw field collection log Excel — Zvishavane
+raw/zw_src_004_heritage_knowledge/README.md,ed12842fd95e54251e5f9b02f88d0f03d9708ea75fb650e32daee3840d72323b,1305,v1.0.0,documentation,confidential,Raw directory convention and access terms — ZW-SRC-004 Heritage knowledge
+raw/zw_src_004_heritage_knowledge/raw_heritage_transcripts_feed.csv,9c19efd23c5b37064d5567c019a9a9520cd9ffca2b2ec31fefc32bf140c9aa2b,24670,v1.0.0,data,confidential,Raw heritage transcripts feed
+raw/zw_src_004_heritage_knowledge/raw_heritage_transcripts_feed.xlsx,09a801c83499c683d4e72c276837effffd8f734cc7415fe22a08c493964d3f29,17659,v1.0.0,data,confidential,Raw heritage transcripts feed Excel
+raw/zw_src_005_national_herbarium/README.md,06ec9530b6315941c4cfc087a00efc84cf89385164921597ce951076a9176aba,967,v1.0.0,documentation,public,Raw directory convention and access terms — ZW-SRC-005 National Herbarium
+raw/zw_src_005_national_herbarium/raw_herbarium_accessions_catalog.csv,8444dba3739d4ced54f4e19f8cfb2f41d6e530585425be955974d5f4b47c4675,31768,v1.0.0,data,public,Raw herbarium accessions catalog
+raw/zw_src_005_national_herbarium/raw_herbarium_accessions_catalog.xlsx,17e29089675d8eac787dec548ce5b81e6c7044c885ae19a0f398c353928d86f8,21763,v1.0.0,data,public,Raw herbarium accessions catalog Excel
+raw/zw_src_006_sirdc_lcms/README.md,54ccc0d0477a44d637b9c47995babd528d3c90fda06537de156c773081de825d,1092,v1.0.0,documentation,public,Raw directory convention and access terms — ZW-SRC-006 SIRDC LC-MS
+raw/zw_src_006_sirdc_lcms/raw_lcms_spectral_features.csv,76ea5c94700d191f28663bb762c8b8412cd068501bfbc6d9a8e21fbe13314bef,35471,v1.0.0,data,internal,Raw LC-MS spectral features matrix
+raw/zw_src_006_sirdc_lcms/raw_lcms_spectral_features.xlsx,76b95933eae68d9a3de238001988a59b1f1eadbd78c088a3882e28472853e0cc,22785,v1.0.0,data,internal,Raw LC-MS spectral features matrix Excel
+raw/zw_src_007_opportunistic/README.md,6af0bab7831b88aced9dbfe47f9f988361b48b40bd9e6ef15795b02c807dfbb9,703,v1.0.0,documentation,public,Raw directory convention and access terms — ZW-SRC-007 Opportunistic Sites
+raw/zw_src_007_opportunistic/raw_opportunistic_field_log.csv,b8cd6314d12c7d6eb066f5629062ef75c55e772d0454ff88d3fe2ddd7bbdc372,6870,v1.0.0,data,public,Raw opportunistic field log
+raw/zw_src_007_opportunistic/raw_opportunistic_field_log.xlsx,3fae38a585e7972790f1362e38ac0174ded5a71c82433cacf57c0f9acbb30eae,8551,v1.0.0,data,public,Raw opportunistic field log Excel
+schema/data_dictionary.csv,d3b65e160d10a60ccd3a0365ed122101e2cc40e76ad088e9140e187cadf5ce9f,62003,v1.0.0,schema,public,156 documented fields — Annex A columns verbatim
+schema/data_dictionary.xlsx,ac9b6877dab325cf10303bd65a9e8970be8b63d478a39d8a6440e9565fe1eddc,30200,v1.0.0,schema,public,"Data dictionary formatted for presentation, with a coverage summary"
+schema/erd.svg,0b7809df8764e7dcc684cc10abdf79718e172351c9d29dd2f8a8744b91e2257d,22803,v1.0.0,schema,public,Entity relationship diagram
+schema/schema.json,e2320a4357f557367e543fc5a0008a3453d0d4ddecc40cafd8339801f4c643df,69637,v1.0.0,schema,public,Machine-readable schema generated from the DDL
+schema/schema.sql,7aabef0ba911d807436b0ac01a505346dde02c2f6798cfc8695b92bc11cf9e83,23900,v1.0.0,schema,public,"SQL DDL: tables, constraints, indexes and three governance views"
+scratch/export_excel.py,0326f3c69b42ec5facb9f3be5e1a341f25bd7a41b4f2fc47a76cd44f776dadd3,2999,v1.0.0,code,internal,Utility to export CSV files to Excel workbooks
+scratch/generate_expanded_dataset.py,f95a61b5c55856514ff64b97668f31721782eee010fcf8d83fd47c6f07add9f3,37880,v1.0.0,code,internal,Utility generator script
+scripts/build_manifest.py,f6ebc75f0e88a4680515738b0161070a1bc08edf3afb35ec329f44487f7dce3d,10875,v1.0.0,code,public,This generator
+scripts/generate_reports.py,7377ca9319f3b60a7664127867cad225bdad02582756e997a39f5ebeffd9a5f1,31585,v1.0.0,code,public,Generates the five PDF deliverables
+scripts/machine_loading_test.py,fc0ee6d72b195abece2a4fdf3bbaf2c0fcb610361fcd8ebf9617d1e46db0a191,5918,v1.0.0,code,public,Minimum Expectations §6.3 machine-loading demonstration
+scripts/validate.py,23a5693e14778c90aaa50363dae91ef5de2d133f3b729973f7f4575113f56d9e,33641,v1.0.0,code,public,"Ingest validator, checks V01–V21"
+validation/error_log.csv,7592b386ae2c03b513fd5214ec463982d0dc928f57fb6da3d4f258469f43e745,6488,v1.0.0,validation,public,"Warnings and failures with owner, severity, action and status"
+validation/quality_report_v1.pdf,e07d4cd79864f4ec7011196ee2c45c99e95652be7ec088befebcbe256d7dbf97,11812,v1.0.0,validation,public,"Annex D quality report, generated from the qc log"
+validation/validation_rules.json,0972a4b8742b3fe7e828878fbf7049a4c036d4415f47295bf977c8ddeee7efbf,13879,v1.0.0,validation,public,Machine-readable rules; the validator reads thresholds from here

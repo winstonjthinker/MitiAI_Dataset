@@ -1,0 +1,32 @@
+{
+  "title": "ZW-BioBank v1.0 — Subset: Environmental Samples (T1, Stream D)",
+  "description": "The physical collection events and their environmental context: ecozone, coordinates, altitude, soil pH, temperature, rainfall, canopy cover, preservation method and time to preservation. Root provenance for every downstream record. KNOWN GAPS: coordinates in the public tier are ward centroids, not field positions; communal-land weighting means undisturbed habitat is under-represented.",
+  "source": "Miti AI Consortium. Field collection across three Zimbabwean ecozones (ZW-SRC-001/002/003); consented traditional heritage knowledge holders (ZW-SRC-004); National Herbarium of Zimbabwe (ZW-SRC-005); SIRDC LC-MS instrumentation (ZW-SRC-006). Full provenance with permission status and known limitations in governance/source_register.csv.",
+  "timestamp": {
+    "collection_start": "2026-09-01T00:00:00+02:00",
+    "collection_end": "2027-02-28T23:59:59+02:00"
+  },
+  "license": "Public tier. Ward-level coordinates only.",
+  "language_tags": [
+    "sn",
+    "nd",
+    "en"
+  ],
+  "geographic_coverage": "Zimbabwe — Eastern Highlands (Chimanimani, Mutare, Nyanga), Mazowe (Chiredzi, Chipinge border), Zvishavane (Hwange, Gokwe, Midlands). Public release carries ward-centroid coordinates at 5000 m stated precision.",
+  "temporal_coverage": "Dry season September–November 2026; wet season refresh January–March 2027. Every record carries a season tag, because plant and microbial chemistry differ between them.",
+  "data_type": "tabular, geospatial",
+  "data_sensitivity": "public",
+  "consent_status": "not_required — NBA permit as institutional lawful basis",
+  "quality_summary": "Validator run over 28 illustrative records produced 139 checks: 131 pass, 8 warning, 0 fail. All seven Minimum Expectations quality dimensions are exercised (accuracy, completeness, consistency, integrity, timeliness, uniqueness, validity). Critical-field completeness threshold is 95%. Warnings are documented caveats, not defects: unverified translation, sub-Q10 sequence quality, MSI level 3-4 putative annotations, and single-season ecozone coverage pending the seasonal refresh. Full detail in processed/qc_log_v1.csv and validation/error_log.csv.",
+  "bias_and_coverage_notes": "Geographic (BR-01), seasonal (BR-02), institutional/land-tenure (BR-06) and urban proximity (BR-07). Coverage against quota is queryable through v_bias_coverage.",
+  "version": "v1.0.0",
+  "contact_or_steward": "SIRDC — Scientific and Industrial Research and Development Centre (primary steward, institutional custody). Miti AI Consortium (technical maintainer). Lead Innovator: Mutsa M Mutepfa.",
+  "extensions": {
+    "records_illustrative": 10,
+    "target_records": 500,
+    "primary_key": "sample_id",
+    "id_format": "ZW-SMP-YYYY-NNN",
+    "coordinate_reference_system": "WGS 84 (EPSG:4326)",
+    "file": "processed/environmental_samples_v1.csv"
+  }
+}

@@ -1,0 +1,205 @@
+{
+  "rules_version": "1.0.0",
+  "dataset": "ZW-BioBank v1.0",
+  "generated_for": "POTRAZ AI for Impact Challenge 2026 · Track 1: Data",
+  "note": "This file is the single source of truth for validation. scripts/validate.py reads it rather than hard-coding thresholds, so a reviewer can change a threshold here and re-run without touching code.",
+
+  "mode": "specification",
+  "mode_note": "'specification' means the records in processed/ are illustrative examples dated inside the PLANNED collection window (2026-09-01 onward), which is still in the future. In this mode a future collection date is reported as informational, because it is expected. Switch to 'production' on the first real ingest: the same date then becomes a hard failure. Nothing else about the check changes — this is a declared mode, not a suppressed rule.",
+
+  "thresholds": {
+    "critical_field_completeness": 0.95,
+    "human_audit_fraction": 0.10,
+    "duplicate_extraction_fraction": 0.10,
+    "min_ndebele_heritage_share": 0.30,
+    "min_mean_q_score": 10.0,
+    "max_minutes_to_preservation": 120,
+    "max_mz_error_ppm": 5.0,
+    "withdrawal_action_days": 30,
+    "ecozone_quota": {
+      "Eastern Highlands": 200,
+      "Mazowe": 150,
+      "Zvishavane": 150
+    }
+  },
+  "ecozone_quota_note": "The quota names three zones and only three. Collection is not confined to them — a holder leads the team to a roadside stand of trees or the bush behind a homestead, and ecozone 'Other' admits that sample rather than refusing it. Out-of-frame samples are reported by V24 and are NEVER counted toward the quota, so the 200/150/150 target cannot be met by relabelling convenience collection. V24 exists to keep that visible: if the out-of-frame share grows, the sampling design has drifted and the number says so.",
+
+  "critical_fields": {
+    "environmental_samples": [
+      "sample_id","source_id","ecozone","district","land_tenure","gps_latitude","gps_longitude",
+      "sample_type","collection_date","season","collector_id","preservation_method",
+      "minutes_to_preservation","processing_lab","chain_of_custody_ref"
+    ],
+    "heritage_knowledge": [
+      "tk_id","source_id","holder_pseudonym_id","community_council_id","council_endorsement_ref",
+      "consent_reference","consent_date","collection_language","knowledge_type","local_plant_name",
+      "language_tag","disease_target_local","sensitivity_level","benefit_sharing_agreement_ref"
+    ],
+    "genomic_sequences": [
+      "sequence_id","sample_id","platform","target_region","run_date","sequencing_lab",
+      "file_path_fasta","file_checksum_sha256"
+    ],
+    "metabolomic_profiles": [
+      "metabolite_id","sample_id","extract_id","extraction_solvent","instrument",
+      "ionization_mode","mz_measured","file_path_mzml","file_checksum_sha256"
+    ]
+  },
+
+  "id_patterns": {
+    "environmental_samples.sample_id": "^ZW-SMP-\\d{4}-\\d{3}$",
+    "genomic_sequences.sequence_id":   "^ZW-SEQ-\\d{4}-\\d{3}$",
+    "metabolomic_profiles.metabolite_id": "^ZW-MET-\\d{4}-\\d{3}$",
+    "heritage_knowledge.tk_id":        "^ZW-TK-\\d{4}-\\d{3}$",
+    "qc_log.qc_id":                    "^ZW-QC-\\d{4}-\\d{3}$",
+    "source_id":                       "^ZW-SRC-\\d{3}$",
+    "consent_reference":               "^FPIC-ZW-\\d{4}-C\\d{3}$"
+  },
+
+  "checks": [
+    { "id": "V01", "name": "schema_insert", "quality_dimension": "validity",
+      "check_type": "schema", "applies_to": "all tables", "severity_on_fail": "high",
+      "description": "Every record is inserted through the DDL in schema/schema.sql. Type, range, controlled vocabulary and cross-field constraints are enforced by the database, not by this script. A record that will not insert is not admitted to the bank.",
+      "validation_area": "schema compliance" },
+
+    { "id": "V02", "name": "critical_field_completeness", "quality_dimension": "completeness",
+      "check_type": "completeness", "applies_to": "all tables", "severity_on_fail": "high",
+      "description": "Each field listed in critical_fields must be populated on at least 95% of records in the batch.",
+      "validation_area": "schema compliance" },
+
+    { "id": "V03", "name": "identifier_format", "quality_dimension": "consistency",
+      "check_type": "controlled_vocab", "applies_to": "all tables", "severity_on_fail": "medium",
+      "description": "Primary keys must match the documented identifier pattern for their table.",
+      "validation_area": "record integrity" },
+
+    { "id": "V04", "name": "primary_key_uniqueness", "quality_dimension": "uniqueness",
+      "check_type": "duplicate", "applies_to": "all tables", "severity_on_fail": "critical",
+      "description": "No identifier may appear twice in an ingest batch. Identifiers are never reissued.",
+      "validation_area": "record integrity" },
+
+    { "id": "V05", "name": "near_duplicate_sample", "quality_dimension": "uniqueness",
+      "check_type": "duplicate", "applies_to": "environmental_samples", "severity_on_fail": "medium",
+      "description": "Two samples of the same type, at the same coordinates, on the same date, from the same collector are flagged as possible double entry.",
+      "validation_area": "record integrity" },
+
+    { "id": "V06", "name": "checksum_format", "quality_dimension": "integrity",
+      "check_type": "checksum", "applies_to": "genomic_sequences, metabolomic_profiles",
+      "severity_on_fail": "high",
+      "description": "Every record referencing a raw file must carry a well-formed SHA-256.",
+      "validation_area": "file integrity" },
+
+    { "id": "V07", "name": "source_id_resolves", "quality_dimension": "integrity",
+      "check_type": "cross_reference", "applies_to": "environmental_samples, heritage_knowledge",
+      "severity_on_fail": "high",
+      "description": "Every source_id must resolve to a row in governance/source_register.csv.",
+      "validation_area": "record integrity" },
+
+    { "id": "V08", "name": "consent_reference_matches_heritage", "quality_dimension": "integrity",
+      "check_type": "consent_gate", "applies_to": "environmental_samples", "severity_on_fail": "critical",
+      "description": "A knowledge-led sample must cite the same consent document as the heritage record it points to.",
+      "validation_area": "privacy" },
+
+    { "id": "V09", "name": "consent_log_agreement", "quality_dimension": "consistency",
+      "check_type": "consent_gate", "applies_to": "heritage_knowledge", "severity_on_fail": "critical",
+      "description": "Every heritage record's consent reference, council endorsement and withdrawal status must agree with governance/consent_log.csv.",
+      "validation_area": "privacy" },
+
+    { "id": "V10", "name": "withdrawal_propagation", "quality_dimension": "integrity",
+      "check_type": "cross_reference", "applies_to": "environmental_samples", "severity_on_fail": "critical",
+      "description": "When a holder withdraws, no linked sample may remain active. Unactioned records hold the batch until resolved inside the 30-day commitment.",
+      "validation_area": "privacy" },
+
+    { "id": "V11", "name": "heritage_link_agreement", "quality_dimension": "consistency",
+      "check_type": "cross_reference", "applies_to": "genomic_sequences", "severity_on_fail": "medium",
+      "description": "The denormalised heritage_link on a sequence must match the parent sample's heritage_use_ref.",
+      "validation_area": "label quality" },
+
+    { "id": "V12", "name": "location_masking", "quality_dimension": "validity",
+      "check_type": "privacy", "applies_to": "environmental_samples", "severity_on_fail": "high",
+      "description": "Any record in a public release tier must be masked, and a masked record must declare degraded coordinate precision.",
+      "validation_area": "privacy" },
+
+    { "id": "V13", "name": "no_direct_identifiers", "quality_dimension": "validity",
+      "check_type": "privacy", "applies_to": "heritage_knowledge", "severity_on_fail": "critical",
+      "description": "Scans free-text fields for patterns resembling personal names, phone numbers or national ID numbers that would defeat pseudonymisation.",
+      "validation_area": "privacy" },
+
+    { "id": "V14", "name": "translation_verified", "quality_dimension": "accuracy",
+      "check_type": "completeness", "applies_to": "heritage_knowledge", "severity_on_fail": "medium",
+      "description": "A record whose translation is not human_verified is held out of every release tier.",
+      "validation_area": "label quality" },
+
+    { "id": "V15", "name": "annotation_confidence_honesty", "quality_dimension": "accuracy",
+      "check_type": "novelty", "applies_to": "metabolomic_profiles", "severity_on_fail": "low",
+      "description": "MSI level 3 or 4 features are putative. They carry a warning so they are never reported as identifications.",
+      "validation_area": "label quality" },
+
+    { "id": "V16", "name": "preservation_latency", "quality_dimension": "accuracy",
+      "check_type": "range", "applies_to": "environmental_samples", "severity_on_fail": "medium",
+      "description": "Time from collection to stabilisation above the target threshold flags the sample for degradation review.",
+      "validation_area": "schema compliance" },
+
+    { "id": "V17", "name": "sequence_quality", "quality_dimension": "accuracy",
+      "check_type": "range", "applies_to": "genomic_sequences", "severity_on_fail": "medium",
+      "description": "Mean Phred score below the threshold makes downstream taxonomic assignment provisional.",
+      "validation_area": "schema compliance" },
+
+    { "id": "V18", "name": "collection_window", "quality_dimension": "timeliness",
+      "check_type": "range", "applies_to": "environmental_samples", "severity_on_fail": "medium",
+      "description": "Collection dates must fall inside the declared collection window for their source and must not be in the future.",
+      "validation_area": "schema compliance" },
+
+    { "id": "V19", "name": "language_representation", "quality_dimension": "completeness",
+      "check_type": "bias_coverage", "applies_to": "heritage_knowledge", "severity_on_fail": "medium",
+      "description": "Ndebele-language heritage records must make up at least 30% of the active corpus.",
+      "validation_area": "bias and coverage" },
+
+    { "id": "V20", "name": "ecozone_coverage", "quality_dimension": "completeness",
+      "check_type": "bias_coverage", "applies_to": "environmental_samples", "severity_on_fail": "low",
+      "description": "Reports progress against the 200/150/150 ecozone quota and flags any zone at less than half the expected share of collection to date.",
+      "validation_area": "bias and coverage" },
+
+    { "id": "V21", "name": "seasonal_coverage", "quality_dimension": "completeness",
+      "check_type": "bias_coverage", "applies_to": "environmental_samples", "severity_on_fail": "medium",
+      "description": "Every ecozone must eventually carry both dry and wet season records; a single-season ecozone confounds season with site.",
+      "validation_area": "bias and coverage" },
+
+    { "id": "V22", "name": "machine_loading", "quality_dimension": "integrity",
+      "check_type": "machine_readability", "applies_to": "package", "severity_on_fail": "high",
+      "description": "Every processed file must load into pandas and into SQL without manual editing. Implemented in scripts/machine_loading_test.py and required by Minimum Expectations §6.3.",
+      "validation_area": "machine-readability" },
+
+    { "id": "V23", "name": "manifest_integrity", "quality_dimension": "integrity",
+      "check_type": "checksum", "applies_to": "package", "severity_on_fail": "high",
+      "description": "Every file in manifest.csv must exist and match its recorded SHA-256. Implemented in scripts/build_manifest.py --verify.",
+      "validation_area": "file integrity" },
+
+    { "id": "V24", "name": "out_of_frame_coverage", "quality_dimension": "completeness",
+      "check_type": "bias_coverage", "applies_to": "environmental_samples", "severity_on_fail": "medium",
+      "description": "Reports the share of active samples collected outside the three named ecozones. These are admitted, not refused — collection follows the holder, not the sampling frame — but they do not count toward the quota, and a rising share means the design has drifted toward convenience collection. Warns above 25%.",
+      "validation_area": "bias and coverage" },
+
+    { "id": "V25", "name": "locality_for_out_of_frame", "quality_dimension": "completeness",
+      "check_type": "constraint", "applies_to": "environmental_samples", "severity_on_fail": "high",
+      "description": "A sample with ecozone 'Other' must carry a locality_description. Enforced as a CHECK in the DDL (rule D5): with no zone name describing the site, the free text is the only thing that makes it findable again.",
+      "validation_area": "structural constraints" }
+  ],
+
+  "acceptance_criteria": {
+    "release_blocked_by": [
+      "any check_result of 'fail' at severity 'critical'",
+      "critical field completeness below 0.95 on any table",
+      "any unactioned withdrawal propagation",
+      "any heritage record below translation_status 'human_verified' being included in a release tier"
+    ],
+    "release_permitted_with_warnings": [
+      "MSI level 3-4 annotations, provided they are labelled putative",
+      "mean Q score below 10, provided assignments are marked provisional",
+      "preservation latency above target, provided the sample is flagged for degradation review"
+    ],
+    "pass_warning_fail_definition": {
+      "pass": "The record satisfies the check and may enter the bank.",
+      "warning": "The record enters the bank carrying a documented caveat that downstream users must honour.",
+      "fail": "The record is not admitted. The batch is held until the issue is corrected or formally waived with a recorded owner and action."
+    }
+  }
+}

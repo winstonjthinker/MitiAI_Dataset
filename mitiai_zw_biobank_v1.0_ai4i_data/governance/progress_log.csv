@@ -1,0 +1,13 @@
+milestone_id,milestone,owner,date_started,date_completed,status,evidence,completion_test
+PRG-001,Schema and 156-field data dictionary frozen,Data Architect,TODO-DATE,TODO-DATE,complete,schema/schema.sql · schema/data_dictionary.csv,validator runs clean against the schema
+PRG-002,Validation rules and thresholds agreed and externalised,Data Architect,TODO-DATE,TODO-DATE,complete,validation/validation_rules.json,a reviewer can change a threshold and re-run without touching code
+PRG-003,LEC Biotec MOU signed — mobile and portable field laboratories,Lead Innovator,TODO-DATE,TODO-DATE,complete,countersigned MOU held by Miti AI; original available on request,countersigned copy on file and available in the room
+PRG-004,SIRDC institutional custody agreed,Lead Innovator,TODO-DATE,TODO-DATE,complete,see governance/access_policy.pdf,steward named in metadata and README
+PRG-005,Governance pack drafted — consent template, anonymisation plan, access policy,Community Liaison Lead,TODO-DATE,TODO-DATE,complete,governance/*.pdf,all five PDFs regenerate from scripts/generate_reports.py
+PRG-006,Bias risk register with runnable monitoring queries,Data Architect,TODO-DATE,TODO-DATE,complete,governance/bias_risk_register.csv,every risk carries a query that executes against the schema
+PRG-007,Validator implemented — 18 checks across 7 quality dimensions,Miti AI,TODO-DATE,TODO-DATE,complete,scripts/validate.py,470 checks run; all seven dimensions exercised
+PRG-008,Machine-loading test passes in five environments,Miti AI,TODO-DATE,TODO-DATE,complete,scripts/machine_loading_test.py,Python, SQL, pandas, R and QGIS all load with no manual editing
+PRG-009,Illustrative batch validated end to end,Miti AI,TODO-DATE,TODO-DATE,complete,processed/ · validation/error_log.csv,0 failures; 31 warnings each with a named owner
+PRG-010,NBA permit application submitted,Lead Innovator,TODO-DATE,TODO-DATE,TODO-STATUS,TODO-EVIDENCE,permit reference recorded in the source register
+PRG-011,First community council engagement,Community Liaison Lead,TODO-DATE,TODO-DATE,TODO-STATUS,TODO-EVIDENCE,council endorsement reference issued
+PRG-012,Field collection commences,Field Collection Lead,TODO-DATE,,planned,,first batch admitted with 0 failures

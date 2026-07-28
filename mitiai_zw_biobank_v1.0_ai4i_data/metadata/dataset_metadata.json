@@ -1,0 +1,106 @@
+{
+  "title": "ZW-BioBank v1.0 — Zimbabwe Multi-Modal Indigenous Biology Dataset",
+  "description": "A sovereign, controlled-access dataset joining four data streams on a single physical sample identifier: genomic sequence (Stream A), metabolomic LC-MS profile (Stream B), documented traditional heritage knowledge (Stream C), and environmental context (Stream D). Each stream exists somewhere in the world in isolation; the join on one sample is the contribution. Sampling is stratified across three Zimbabwean ecozones and both seasons, and is targeted by heritage knowledge rather than collected at random. Intended for training and evaluating biological foundation models for antimicrobial peptide design and natural-product discovery against MDR-TB, WHO critical-priority AMR pathogens, schistosomiasis and drug-resistant malaria. KNOWN GAPS: this is a 500-sample pilot, not a national inventory; the heritage corpus reflects only consenting holders in participating communities; most untargeted LC-MS features are never confidently identified; knowledge classified sacred is absent by design.",
+  "source": "Miti AI Consortium. Field collection across three Zimbabwean ecozones (ZW-SRC-001/002/003); consented traditional heritage knowledge holders (ZW-SRC-004); National Herbarium of Zimbabwe (ZW-SRC-005); SIRDC LC-MS instrumentation (ZW-SRC-006). Full provenance with permission status and known limitations in governance/source_register.csv.",
+  "timestamp": {
+    "collection_start": "2026-09-01T00:00:00+02:00",
+    "collection_end": "2027-02-28T23:59:59+02:00"
+  },
+  "license": "Sovereign controlled access, tiered. NOT an open data licence. Public tier: schema, dictionary, metadata, validation code and aggregate statistics. Research tier: data access agreement with SIRDC. Restricted tier: SIRDC plus community council concurrence. Commercial use: gated behind an executed benefit-sharing agreement, no exceptions. Code under MIT. See governance/license.txt.",
+  "language_tags": [
+    "sn",
+    "nd",
+    "en"
+  ],
+  "geographic_coverage": "Zimbabwe — Eastern Highlands (Chimanimani, Mutare, Nyanga), Mazowe (Chiredzi, Chipinge border), Zvishavane (Hwange, Gokwe, Midlands). Public release carries ward-centroid coordinates at 5000 m stated precision.",
+  "temporal_coverage": "Dry season September–November 2026; wet season refresh January–March 2027. Every record carries a season tag, because plant and microbial chemistry differ between them.",
+  "data_type": "tabular, genomic_sequence (FASTA), mass spectrometry (mzML), text, geospatial, mixed",
+  "data_sensitivity": "mixed — public (environmental and genomic records), internal (metabolomic profiles), confidential (heritage knowledge). Sacred knowledge: not collected.",
+  "consent_status": "obtained — FPIC per heritage knowledge holder, in the holder's own language, plus community council endorsement, both dated before the interview. Environmental samples: not_required (NBA permit as institutional lawful basis).",
+  "quality_summary": "Validator run over 28 illustrative records produced 139 checks: 131 pass, 8 warning, 0 fail. All seven Minimum Expectations quality dimensions are exercised (accuracy, completeness, consistency, integrity, timeliness, uniqueness, validity). Critical-field completeness threshold is 95%. Warnings are documented caveats, not defects: unverified translation, sub-Q10 sequence quality, MSI level 3-4 putative annotations, and single-season ecozone coverage pending the seasonal refresh. Full detail in processed/qc_log_v1.csv and validation/error_log.csv.",
+  "bias_and_coverage_notes": "Eight risks are registered with runnable monitoring queries in governance/bias_risk_register.csv. Principal known gaps: Eastern Highlands is closest to institutions and over-samples easily (quota 200/150/150 enforced); a single-season dataset would confound season with site (dry plus wet refresh, season tag mandatory); Shona-speaking communities are more accessible than Ndebele-speaking ones (30% Ndebele floor, checked by the validator each batch); protected-area access uncertainty pushes collection onto communal land, over-representing human-modified habitat; and annotation itself is biased, because spectral libraries are Western-built and the compounds they cannot match are exactly the novel fraction this dataset exists to find. Live coverage is queryable through view v_bias_coverage.",
+  "version": "v1.0.0",
+  "contact_or_steward": "SIRDC — Scientific and Industrial Research and Development Centre (primary steward, institutional custody). Miti AI Consortium (technical maintainer). Lead Innovator: Mutsa M Mutepfa.",
+  "extensions": {
+    "release_status": "Phase I specification. Schema, dictionary, metadata, validation code and folder structure are final. All records in processed/ are ILLUSTRATIVE structural examples, not collected data.",
+    "record_counts_illustrative": {
+      "environmental_samples": 10,
+      "genomic_sequences": 6,
+      "metabolomic_profiles": 6,
+      "heritage_knowledge": 6,
+      "qc_log": 139
+    },
+    "target_record_counts": {
+      "environmental_samples": 500,
+      "genomic_sequences": "5-10 million",
+      "metabolomic_profiles": 2500,
+      "heritage_knowledge": "300-500"
+    },
+    "intended_ai_task": "Sequence-to-function prediction and de novo antimicrobial peptide design; multi-modal correlation of genomic, metabolomic and heritage signals to prioritise drug candidates.",
+    "boundary_statement": "This data will NOT be used for surveillance, individual identification, credit assessment, law enforcement or profiling. The schema contains no field capable of identifying a natural person.",
+    "structure": {
+      "join_key": "sample_id",
+      "provenance_key": "tk_id",
+      "documented_fields": 156,
+      "tables": 5,
+      "data_dictionary": "schema/data_dictionary.csv",
+      "machine_readable_schema": "schema/schema.json",
+      "sql_ddl": "schema/schema.sql",
+      "entity_relationship_diagram": "schema/erd.svg"
+    },
+    "ai_readiness": {
+      "tokenization": {
+        "molecules": "Canonical SMILES, RDKit-canonicalised at ingest so one molecule is not learned as several unrelated strings.",
+        "dna": "k-mer for marker-gene records, codon-aware for coding regions. Character-level is faithful but sequence lengths explode against quadratic attention; byte-pair encoding compresses well but splits functional motifs at arbitrary boundaries.",
+        "heritage_text": "A tokenizer trained on this corpus. An off-the-shelf English tokenizer fragments Shona and Ndebele into meaningless subwords, inflating sequence length and destroying morphological structure. This is the concrete technical reason language_tag is a required field."
+      },
+      "evaluation_protocol": {
+        "molecular_splits": "Scaffold split on InChIKey, never random. Random splits place near-identical analogues on both sides and silently inflate reported accuracy; it is the commonest way cheminformatics results fail to replicate.",
+        "additional_holdouts": [
+          "ecozone-held-out",
+          "collection_event-blocked",
+          "season-held-out"
+        ],
+        "known_confounds": [
+          "sequencing platform",
+          "basecalling model",
+          "processing lab",
+          "preservation method",
+          "extraction solvent",
+          "collector identity"
+        ]
+      },
+      "label_honesty": {
+        "metabolomics": "MSI levels 1-4 recorded per feature. Levels 3 and 4 are hypotheses and must not be reported as identifications.",
+        "taxonomy": "taxon_confidence separates field-tentative from herbarium- and sequence-confirmed identifications.",
+        "translation": "Records below translation_status 'human_verified' are held out of every release tier."
+      }
+    },
+    "governance": {
+      "structural_rules": [
+        "Consent gate: CHECK (heritage_use_ref IS NULL OR consent_reference IS NOT NULL).",
+        "Sacred exclusion: sensitivity_level admits 'public' and 'community-restricted' only.",
+        "Prior consent: CHECK (consent_date <= interview_date).",
+        "Permit gate: processing cannot be marked complete without nba_permit_ref."
+      ],
+      "holder_identity": "Held in an AES-256 encrypted Holder Identity Register in SIRDC custody, distributed at no access tier. The dataset carries pseudonyms only.",
+      "withdrawal": "Unconditional and permanent. Linked records pseudonymised or deleted within 30 days. View v_withdrawal_impact enumerates them; the validator holds the batch until each is actioned.",
+      "legal_basis": [
+        "Nagoya Protocol on Access and Benefit-sharing",
+        "Zimbabwe Data Protection Act [Chapter 12:07]"
+      ]
+    },
+    "annex_conformance": {
+      "annex_a_data_dictionary": "schema/data_dictionary.csv uses the twelve Annex A columns verbatim and in order, with table, primary_key and ai_relevance appended.",
+      "annex_b_metadata_card": "This file uses the fifteen Annex B keys verbatim and in order; project additions are confined to 'extensions'.",
+      "annex_c_folder_structure": "Package layout follows Annex C, with a scripts/ folder added for the validator, manifest builder and machine-loading test.",
+      "annex_d_quality_report": "validation/quality_report_v1.pdf follows the Annex D row set."
+    },
+    "corrections_to_submitted_proposal": [
+      "Proposal §3.3 uses the key 'bias_coverage_notes'. Annex B specifies 'bias_and_coverage_notes'. This card uses the Annex spelling.",
+      "Proposal §3.3 omits 'temporal_coverage', which Annex B requires. It is present here.",
+      "Proposal §2.3 source register omits 'known_limitations', which §4.2 lists as a required provenance field. It is present in governance/source_register.csv.",
+      "Proposal §3.2 lists 'sacred' among the allowed values of sensitivity_level while also stating sacred knowledge is never collected. The schema resolves the contradiction in favour of the stated principle: 'sacred' is not a storable value."
+    ]
+  }
+}

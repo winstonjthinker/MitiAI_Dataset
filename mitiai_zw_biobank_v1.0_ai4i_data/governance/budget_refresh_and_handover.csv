@@ -1,0 +1,10 @@
+gate_id,gate,unlocks,completion_test,verified_by,amount_usd,notes
+G0,Package accepted,Schema frozen; no funds drawn,validator runs clean and manifest verifies,SIRDC Data Steward,0,"No money moves before the schema is fixed. Changing it later invalidates every record already collected."
+G1,Permission in place,Field kit; mobile laboratory time; consent instrument printing,NBA permit reference recorded and two council endorsements issued,Lead Innovator,TODO-AMOUNT,"Nothing is spent on collection until it is lawful to collect."
+G2,First batch admitted,Sequencing consumables; first LC-MS block,"first field batch synced with 0 failures; median preservation latency under 30 min",Miti AI,TODO-AMOUNT,"Releases only if the pipeline actually works in the field, not in a demo."
+G3,Wet-season pass complete,Second LC-MS block; annotation round one,seasonal warning closed for every ecozone,Field Collection Lead,TODO-AMOUNT,"Season confounded with site is a scientific defect; this gate exists to close it."
+G4,Quota met,Annotation round two; adjudication of disagreements,200/150/150 reached per ecozone and Ndebele floor held,Field Collection Lead,TODO-AMOUNT,"Quota is a ceiling for Eastern Highlands, a target for the other two."
+G5,Provenance proven,Release engineering; community portal rollout,"a compound resolves to a signed benefit-sharing agreement through v_provenance_chain",SIRDC Data Steward,TODO-AMOUNT,"If this does not return a row, the central claim of the dataset is not yet true."
+G6,v1.1 released,Handover to SIRDC operations; refresh cycle begins,"signed release bundle; manifest verifies; no open critical findings",SIRDC Data Steward,TODO-AMOUNT,"Custody transfers here. The dataset must survive Miti AI."
+REFRESH,Seasonal refresh,Ongoing collection,both seasons present in every ecozone for the release year,Field Collection Lead,TODO-AMOUNT,"Twice yearly, dry and wet. The cycle is scientific, not administrative."
+MAINT,Annual maintenance,Schema versioning; validator upkeep; access administration,validator and manifest pass on the current package,Miti AI,TODO-AMOUNT,"Technical maintenance stays with Miti AI; custody stays with SIRDC."

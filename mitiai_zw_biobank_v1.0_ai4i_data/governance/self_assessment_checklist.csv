@@ -1,0 +1,14 @@
+area,checklist_question,status,evidence_location
+Purpose,"The AI use case, target users, and local relevance are clearly stated.",Yes,"Proposal §1.1-1.4; metadata/dataset_metadata.json (description, intended_ai_task)"
+Source,"All data sources, owners, access rights, and collection methods are documented.",Yes,governance/source_register.csv (all seven required provenance fields incl. known_limitations)
+Consent,Consent or lawful basis is defined for all personal data collection.,Yes,governance/consent_template.pdf; governance/consent_log.csv; CHECK (consent_date <= interview_date)
+Privacy,"Personal identifiers are minimised, masked, anonymised, or lawfully retained.",Yes,governance/anonymization_plan.pdf; holder identity is not in the schema at any tier
+Metadata,"Metadata cards include title, description, source, timestamp, license, and language_tags.",Yes,"metadata/dataset_metadata.json plus four subset cards, all using Annex B keys verbatim"
+Dictionary,"A data dictionary defines fields, types, units, constraints, and allowed values.",Yes,schema/data_dictionary.csv — Annex A columns; generated from schema.sql so it cannot drift
+Quality,"The proposal includes completeness, accuracy, consistency, validity, uniqueness, timeliness, and integrity checks.",Yes,validation/validation_rules.json; every qc_log row is tagged with its quality_dimension
+Labels,"Label definitions, annotation guide, reviewer workflow, and label quality checks are provided where labels are used.",Yes,labels/label_taxonomy.csv; labels/annotation_guide.pdf; labels/annotations_v1.jsonl
+Bias,The proposal identifies representativeness risks and mitigation steps.,Yes,"governance/bias_risk_register.csv — eight risks, each with a runnable monitoring query; view v_bias_coverage"
+Validation,Automated and human validation steps are described with pass or fail criteria.,Yes,scripts/validate.py; validation/quality_report_v1.pdf; validation/error_log.csv
+Formats,Data will be delivered in open or standard machine-readable formats.,Yes,"CSV (UTF-8), JSON, JSONL, SQL DDL, mzML and FASTA for raw. No proprietary-only format."
+Security,"Storage, access control, encryption, backup, and retention rules are described.",Yes,governance/access_policy.pdf; governance/dpa_compliance_matrix.csv
+Sustainability,"Data stewardship, refresh plan, budget, and licensing are explained.",Yes,Proposal §5.1-5.4; governance/license.txt; SIRDC named as primary steward

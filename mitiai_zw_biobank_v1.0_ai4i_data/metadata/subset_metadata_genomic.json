@@ -1,0 +1,36 @@
+{
+  "title": "ZW-BioBank v1.0 — Subset: Genomic Sequences (T2, Stream A)",
+  "description": "Sequencing run products from T1 samples: Oxford Nanopore MinION in the field and Illumina at SIRDC. Carries platform, basecalling model, depth and quality metrics, taxonomic assignment with the classifier and reference database version, BLAST novelty, and secondary metabolite gene cluster counts. KNOWN GAPS: Nanopore output is basecaller-model dependent and reproducible only against the recorded model; taxonomic assignment against Western-built reference databases systematically under-calls locally novel organisms.",
+  "source": "Miti AI Consortium. Field collection across three Zimbabwean ecozones (ZW-SRC-001/002/003); consented traditional heritage knowledge holders (ZW-SRC-004); National Herbarium of Zimbabwe (ZW-SRC-005); SIRDC LC-MS instrumentation (ZW-SRC-006). Full provenance with permission status and known limitations in governance/source_register.csv.",
+  "timestamp": {
+    "collection_start": "2026-09-15T00:00:00+02:00",
+    "collection_end": "2027-02-28T23:59:59+02:00"
+  },
+  "license": "Research tier. Data access agreement with SIRDC required.",
+  "language_tags": [
+    "en"
+  ],
+  "geographic_coverage": "Zimbabwe — Eastern Highlands (Chimanimani, Mutare, Nyanga), Mazowe (Chiredzi, Chipinge border), Zvishavane (Hwange, Gokwe, Midlands). Public release carries ward-centroid coordinates at 5000 m stated precision.",
+  "temporal_coverage": "Dry season September–November 2026; wet season refresh January–March 2027. Every record carries a season tag, because plant and microbial chemistry differ between them.",
+  "data_type": "genomic_sequence (FASTA), tabular",
+  "data_sensitivity": "public",
+  "consent_status": "not_required",
+  "quality_summary": "Validator run over 28 illustrative records produced 139 checks: 131 pass, 8 warning, 0 fail. All seven Minimum Expectations quality dimensions are exercised (accuracy, completeness, consistency, integrity, timeliness, uniqueness, validity). Critical-field completeness threshold is 95%. Warnings are documented caveats, not defects: unverified translation, sub-Q10 sequence quality, MSI level 3-4 putative annotations, and single-season ecozone coverage pending the seasonal refresh. Full detail in processed/qc_log_v1.csv and validation/error_log.csv.",
+  "bias_and_coverage_notes": "Instrument and platform batch effects (BR-04). Reference-database bias means organism_novelty is conservative: a low BLAST identity may reflect a gap in GenBank rather than true novelty, which is precisely the gap this dataset addresses.",
+  "version": "v1.0.0",
+  "contact_or_steward": "SIRDC — Scientific and Industrial Research and Development Centre (primary steward, institutional custody). Miti AI Consortium (technical maintainer). Lead Innovator: Mutsa M Mutepfa.",
+  "extensions": {
+    "records_illustrative": 6,
+    "target_records": "5-10 million sequences",
+    "primary_key": "sequence_id",
+    "id_format": "ZW-SEQ-YYYY-NNN",
+    "labels": [
+      "organism_novelty",
+      "predicted_function",
+      "disease_target_relevance",
+      "annotation_confidence",
+      "heritage_link"
+    ],
+    "file": "processed/genomic_sequences_v1.csv"
+  }
+}
