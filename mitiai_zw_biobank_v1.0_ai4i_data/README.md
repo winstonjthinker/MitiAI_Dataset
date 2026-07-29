@@ -83,9 +83,26 @@ Reviewers and adjudicators can execute and verify the recorded technical walkthr
 python scripts/machine_loading_test.py      # PROOF 1: Load Data & Machine Readiness
 python scripts/validate.py                  # PROOF 2 & 4: Trace Provenance & Run Quality Checks
 python scripts/validate.py --demo           # PROOF 4: Demonstrate 4 Refusal & Governance Gates
+python scripts/validate.py                  #          Re-run clean: restores BATCH CLEAN after the demo
 python scripts/generate_reports.py          # PROOF 3 & 5: Generate Structure & Governance PDF Reports
+python scripts/build_manifest.py            #          Re-seal: checksum the freshly written logs
 python scripts/build_manifest.py --verify   # PROOF 5: Verify Cryptographic Data Handover & Integrity
 ```
+
+**Run these in order.** Two steps exist for a reason that matters when you reproduce this:
+
+- `validate.py` stamps the run time into `checked_at` on every row it writes, so
+  `processed/qc_log_v1.csv` and `validation/error_log.csv` legitimately carry a new
+  SHA-256 after each run. `build_manifest.py` re-seals the manifest over those files.
+  Verifying *before* re-sealing reports them as `ALTERED` — that is the manifest doing
+  its job, not a fault in the package.
+- The `--demo` run deliberately leaves the batch in `BATCH HELD`. Re-running the clean
+  `validate.py` returns the package to `BATCH CLEAN` before the reports are generated,
+  so `quality_report_v1.pdf` reflects the admitted batch rather than the demo.
+
+Cloning note: `.gitattributes` pins `* -text` so Git performs no line-ending translation
+on checkout. Without it, CRLF conversion would rewrite file bytes and every checksum in
+`manifest.csv` would fail on a fresh clone.
 
 ### Walkthrough Minimum Proofs Breakdown
 

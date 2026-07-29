@@ -1,12 +1,12 @@
 relative_path,sha256,size_bytes,version,role,sensitivity_level,description
 PROJECT_ARCHITECTURE.md,6122a35dd1cab5b4cc32fe2a08a4b61b1a666e0a962b81e61172048b3b9dc08b,20688,v1.0.0,unclassified,public,
-README.md,1af791e63059f9b42f8b25a85584fd58b6a36f66349f0bb6bd687aa1ec566579,17547,v1.0.0,documentation,public,"Package overview, how to run everything, and what is specification versus illustrative"
-governance/access_policy.pdf,f88be85b12f94bfab75703424f8b4fe2c186ba3b52f56b5e08bea123951c082e,6050,v1.0.0,governance,public,"Tiers, roles, security, retention, prohibited uses"
-governance/anonymization_plan.pdf,0846ede8fe9c4aac96a71fb92193ac6228d792a7da65c09ae5c0dc5ba1f1084b,5402,v1.0.0,governance,public,"Structural controls, location masking, re-identification risk"
+README.md,045722bc3d41f9e29b71fca2a70bbdec88fac32d91610e950c5f0ab0cd74a823,18697,v1.0.0,documentation,public,"Package overview, how to run everything, and what is specification versus illustrative"
+governance/access_policy.pdf,368e418451a15c448844d735b7a4c37faefdee08b44711623f9f26e1228813f1,6050,v1.0.0,governance,public,"Tiers, roles, security, retention, prohibited uses"
+governance/anonymization_plan.pdf,7697712b0fe29a16f521bd70e0e5ae06559054d99f1982e01e07f653b6b2bea5,5402,v1.0.0,governance,public,"Structural controls, location masking, re-identification risk"
 governance/bias_risk_register.csv,d3e55d83bab6bd2e25f47c702a6369fb86c5837db764b776825b226fdc5d9226,4027,v1.0.0,governance,public,Eight bias risks with runnable monitoring queries
 governance/budget_refresh_and_handover.csv,691a5ad8389aaf623e86a11d2d2afbe9398a57c0e6d33c0b138e791a9dd96436,2165,v1.0.0,governance,public,Budget refresh and handover timeline
 governance/consent_log.csv,09b291f46025b8fa35bde6cfb76f273b469279000610c0da3e9dbdc95a236fe6,8175,v1.0.0,governance,confidential,FPIC record per heritage knowledge holder
-governance/consent_template.pdf,942c513d855ca746947293b4559dcdadaa03ae12ba7488d76e026a70e28411ca,5577,v1.0.0,governance,public,"FPIC template, English reference version"
+governance/consent_template.pdf,af5adef86069bd7895c7d97f337873dea22282724c9e934c26a96c6f24e704dd,5577,v1.0.0,governance,public,"FPIC template, English reference version"
 governance/dpa_compliance_matrix.csv,8dcd0940133a026e8e0d502bf03da127e1290837dc74f2dd2eac14fa34517b56,3661,v1.0.0,governance,public,Data Protection Act [Chapter 12:07] compliance matrix
 governance/license.txt,70b79cb83cb3e102483c52447e39a9e827f2db8011be70480102549711f06eea,4646,v1.0.0,governance,public,MIT for code; sovereign controlled access for data
 governance/next_90_days.md,b7b2e44805755d422b42a0ed06013853e5c26a01c491e4d13a2c8f7db8a6c6d6,4278,v1.0.0,governance,public,Next 90 days implementation plan
@@ -14,7 +14,7 @@ governance/progress_log.csv,4544d8e8cfeac6e0bee1313e09540b2be1974cffe92d121a50dc
 governance/self_assessment_checklist.csv,c5f019de70e0e2fcd4ecf3847cb6de9f193241f68bea1ae0a0430942afa4a8ac,2457,v1.0.0,governance,public,"Minimum Expectations §7 checklist, completed with evidence locations"
 governance/source_register.csv,2beb0918e687f5f53f5ba7788ff96d692d8f2c5374ac26aa9732445cddddb1c6,6408,v1.0.0,governance,public,Six sources with all seven required provenance fields
 governance/target_population_and_sampling.md,9307d0d925f9d4e66073e61fc564350264e4d072531bc98be84e7aed0019af1c,4194,v1.0.0,governance,public,Target population and sampling strategy
-labels/annotation_guide.pdf,7381a156bcf68c519b0da490bcd963ef5c3dbd70ee60d1e1602c4810c94f3cb0,8109,v1.0.0,labels,public,"Annotator workflow, review and adjudication"
+labels/annotation_guide.pdf,013e399f87ebc1a2d022155876831370db170ce42e5943f57c76e8358b579132,8109,v1.0.0,labels,public,"Annotator workflow, review and adjudication"
 labels/annotations_v1.jsonl,11772b102fcfd9b5c60aa304d9fcdccdade5c600763795dc0d756d4d5d783e2c,121132,v1.0.0,labels,public,"Applied labels with annotator, guide version and review status"
 labels/label_taxonomy.csv,c4ebabb03e464549c726d76eb109849f361cccb38e134d4550c1996b4d5a852f,5238,v1.0.0,labels,public,Ten labels with definitions and positive/negative examples
 metadata/dataset_metadata.json,28d90be4673812e611a71f01672ab4a9d7adf6f87291e44ebbb49bdcb9f37d1d,10041,v1.0.0,metadata,public,Dataset metadata card — Annex B keys verbatim
@@ -30,7 +30,7 @@ processed/heritage_knowledge_v1.csv,9c19efd23c5b37064d5567c019a9a9520cd9ffca2b2e
 processed/heritage_knowledge_v1.xlsx,15404b3a20ae82849f49a5adcb292deab1d863026f7472e90def41672d35d945,18343,v1.0.0,data,confidential,T4 · Stream C Excel spreadsheet (ILLUSTRATIVE)
 processed/metabolomic_profiles_v1.csv,76ea5c94700d191f28663bb762c8b8412cd068501bfbc6d9a8e21fbe13314bef,35471,v1.0.0,data,internal,T3 · Stream B (ILLUSTRATIVE)
 processed/metabolomic_profiles_v1.xlsx,961d676cd81bf3afd02ebfbbcf4255f9db2fcc3bc7cdf39fb72a82f263d0573a,23662,v1.0.0,data,internal,T3 · Stream B Excel spreadsheet (ILLUSTRATIVE)
-processed/qc_log_v1.csv,9dbe33f1beadf4c8d6a3f0bdb2e4aace00efa069fd0b6ce06f99c7f41515e802,191986,v1.0.0,quality,public,"T5 · every validation event, written by validate.py"
+processed/qc_log_v1.csv,4af99aaf8124e9ffcb705efdb841be404873ff3788d70dfe1fae09779b633cfc,191986,v1.0.0,quality,public,"T5 · every validation event, written by validate.py"
 processed/qc_log_v1.xlsx,33933cbf8aa438cc4369e0401564c1cf402d6377a260dd8387a26483d2dc897d,62912,v1.0.0,quality,public,T5 · every validation event Excel spreadsheet
 processed/zw_biobank_v1.0_all_tables.xlsx,f6e138d3cb1ce3ed05532f50fa8d5ebc95fdd0f69f423c950ff48605b8bb5aeb,133489,v1.0.0,data,public,All-in-one Excel workbook containing all data streams as sheets
 raw/zw_src_001_eastern_highlands/README.md,7ed00942ba0ed868d26f49078eb8cc04a936f35546c9a8d98c74385ff105768d,1772,v1.0.0,documentation,public,Raw directory convention and access terms — ZW-SRC-001 Eastern Highlands
@@ -65,6 +65,6 @@ scripts/build_manifest.py,f6ebc75f0e88a4680515738b0161070a1bc08edf3afb35ec329f44
 scripts/generate_reports.py,7377ca9319f3b60a7664127867cad225bdad02582756e997a39f5ebeffd9a5f1,31585,v1.0.0,code,public,Generates the five PDF deliverables
 scripts/machine_loading_test.py,fc0ee6d72b195abece2a4fdf3bbaf2c0fcb610361fcd8ebf9617d1e46db0a191,5918,v1.0.0,code,public,Minimum Expectations §6.3 machine-loading demonstration
 scripts/validate.py,23a5693e14778c90aaa50363dae91ef5de2d133f3b729973f7f4575113f56d9e,33641,v1.0.0,code,public,"Ingest validator, checks V01–V21"
-validation/error_log.csv,7592b386ae2c03b513fd5214ec463982d0dc928f57fb6da3d4f258469f43e745,6488,v1.0.0,validation,public,"Warnings and failures with owner, severity, action and status"
-validation/quality_report_v1.pdf,e07d4cd79864f4ec7011196ee2c45c99e95652be7ec088befebcbe256d7dbf97,11812,v1.0.0,validation,public,"Annex D quality report, generated from the qc log"
+validation/error_log.csv,d7638dfd080df1225c729725953d3f264585dc88854dda337c44ce01881f1ea2,6488,v1.0.0,validation,public,"Warnings and failures with owner, severity, action and status"
+validation/quality_report_v1.pdf,35529250e312ca31875107e8f9a370461197c1fee089570d6dc78eecab6d91d1,11812,v1.0.0,validation,public,"Annex D quality report, generated from the qc log"
 validation/validation_rules.json,0972a4b8742b3fe7e828878fbf7049a4c036d4415f47295bf977c8ddeee7efbf,13879,v1.0.0,validation,public,Machine-readable rules; the validator reads thresholds from here
